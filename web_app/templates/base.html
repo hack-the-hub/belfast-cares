@@ -2,34 +2,160 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Python Getting Started on Heroku</title>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Belfast Cares | Giving back to the community!</title>
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- responsive stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom Margin Padding stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap-margin-padding.css' %}">
 
-    <title>Hack The Hub Template</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="{% static 'css/heroic-features.css' %}" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
+
 <body>
 
+<!-- /.top-bar -->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="logo">
+                    <a href="/">
+                        <img src="{% static 'img/resources/logo.png' %}" alt="Awesome Image"/>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+                <div class="header-right-info pull-right sm-pull-none clearfix">
+                    <div class="single-header-info pb-sm-20">
+                        <div class="icon-box">
+                            <div class="inner-box">
+                                <i class="flaticon-interface-2"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>EMAIL</h3>
+                            <p>contact@belfastcares.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- /.header -->
+
+<nav class="mainmenu-area stricky">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-3 col-md-12">
+                <div class="donate-btn clearfix">
+                    <!-- Modal: donate now Starts -->
+                    <a class="thm-btn pull-left" data-toggle="modal" href="/charities">Donate Now</a>
+
+                    <!-- Modal: donate now Ends -->
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                <div class="navigation">
+                    <div class="nav-header">
+                        <ul>
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/help">How To Help</a>
+                            </li>
+                            <li>
+                                <a href="/charities">Organisations</a>
+                            </li>
+                            <li>
+                                <a href="/contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
 {% block content %}{% endblock %}
+
+<section class="footer-bottom">
+    <div class="container text-center">
+        <p>Belfast Cares</p>
+    </div>
+</section>
+
+<!--Scroll to top-->
+<div class="scroll-to-top"><span class="fa fa-arrow-up"></span></div>
+
+<!-- main jQuery -->
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<!-- bootstrap -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- bx slider -->
+<script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+<!-- owl carousel -->
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<!-- validate -->
+<script src="{% static 'js/jquery-parallax.js' %}"></script>
+<!-- validate -->
+<script src="{% static 'js/validate.js' %}"></script>
+<!-- mixit up -->
+<script src="{% static 'js/jquery.mixitup.min.js' %}"></script>
+<!-- fancybox -->
+<script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+<!-- easing -->
+<script src="{% static 'js/jquery.easing.min.js' %}"></script>
+<!-- circle progress -->
+<script src="{% static 'js/circle-progress.js' %}"></script>
+<!-- appear js -->
+<script src="{% static 'js/jquery.appear.js' %}"></script>
+<!-- count to -->
+<script src="{% static 'js/jquery.countTo.js' %}"></script>
+<!-- gmap helper -->
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<!-- gmap main script -->
+<script src="{% static 'js/gmap.js' %}"></script>
+<!-- isotope script -->
+<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+<!-- jQuery ui js -->
+<script src="{% static 'js/jquery-ui-1.11.4/jquery-ui.js' %}"></script>
+
+
+<script src="{% static 'revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+
+
+<!-- thm custom script -->
+<script src="{% static 'js/custom.js' %}"></script>
+
 
 </body>
 </html>

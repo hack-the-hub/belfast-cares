@@ -1,20 +1,42 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
 
-from .models import Greeting
+from .models import *
 
-# Create your views here.
+
 def index(request):
-    # return HttpResponse('Hello from Python!')
-    return render(request, 'index.html')
+    charities = Organisation.objects.all()
+    return render(request, 'index.html', {'charities': charities})
 
 
-def db(request):
+def login(request):
+    return render(request, 'login.html')
 
-    greeting = Greeting()
-    greeting.save()
 
-    greetings = Greeting.objects.all()
+def volunteer_single(request, volunteer_id):
+    volunteer_data = ''
+    return render(request, 'volunteer_single.html', {'id': volunteer_id})
 
-    return render(request, 'db.html', {'greetings': greetings})
 
+def charities_listing(request):
+    charities = Organisation.objects.all()
+    return render(request, 'charities_listing.html', {'charities': charities})
+
+
+def charities_single(request, charity_id):
+    organisation = get_object_or_404(Organisation, id=charity_id)
+    org_address = organisation.address
+    org_wishlist = organisation.wishlist
+    org_contact = organisation.primary_contact
+
+    return render(request, 'charities_single.html', {'organisation': organisation,
+                                                     'org_address': org_address,
+                                                     'org_wishlist': org_wishlist,
+                                                     'org_primary': org_contact})
+
+
+def help(request):
+    return render(request, 'help.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')
