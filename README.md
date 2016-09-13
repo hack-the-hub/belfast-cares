@@ -1,4 +1,4 @@
-# django-heroku-getting-started
+# Belfast Cares - Django Web App
 
 A barebones Django app utilizing postgres & bootstrap, which can easily be deployed to Heroku.
 
