@@ -1,0 +1,22 @@
+{
+  "name": "belfast-cares",
+  "version": "1.0.0",
+  "description": "A barebones Django app utilizing postgres & bootstrap, which can easily be deployed to Heroku.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hack-the-hub/belfast-cares.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hack-the-hub/belfast-cares/issues"
+  },
+  "homepage": "https://github.com/hack-the-hub/belfast-cares#readme",
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}
